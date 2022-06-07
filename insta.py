@@ -26,12 +26,13 @@ print(Fore.LIGHTMAGENTA_EX+"Created By: MrDarkSmile GitHub")
 
 #get username
 username = str(input(Fore.LIGHTCYAN_EX+"enter username : "+Fore.GREEN))
-print(Fore.LIGHTYELLOW_EX+"loading...")
+print(Fore.LIGHTYELLOW_EX+"Download start...")
 
 #download profile
 loader = instaloader.Instaloader()
 loader.download_profile(username, profile_pic_only = True)
 
+print(Fore.LIGHTYELLOW_EX+"loading...")
 #set name of file
 img = [x for x in os.listdir(f'./{username}') if x.endswith('jpg')]
 img = f'./{username}/{img[0]}'
